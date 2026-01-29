@@ -36,7 +36,7 @@ You can download our [datasets.zip](#) containing training and test sets for eac
 | T4SE | T4SE_train.fasta | T4SE_test.fasta |
 | T6SE | T6SE_train.fasta | T6SE_test.fasta |
 
-> **Note:** This is optional if you want to train your own models. For demo/testing, the example FASTA files are sufficient.
+> **Note:** This is optional if you want to train your own models. For **demo/testing**, the example FASTA files in **tmp** fold are sufficient.
 
 ---
 
@@ -51,7 +51,7 @@ For **online predictions**, visit our web server:
 
 PLM-Effector can be run on local GPU servers for **whole-genome scale analyses**.
 
-### Setup & Prediction Commands
+## 🏃‍♂️ Quick Demo: Setup & Prediction Commands
 
 ```bash
 # Step 1: Create Conda Environment
