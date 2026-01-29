@@ -14,23 +14,18 @@ def main():
     parser.add_argument("--cuda", type=str, default="7", help="CUDA_VISIBLE_DEVICES id (default: 7)")
     args = parser.parse_args()
 
-    # 记录开始时间
     start_time = time.time()
-
-    # 路径
     py_exec = "/home/zhengdd/Softwares/anaconda2/envs/py39_cuda11.3/bin/python"
 
-    # 设置环境变量
     env = os.environ.copy()
     env["CUDA_VISIBLE_DEVICES"] = args.cuda
 
-    # 根据 effector_type 选择模型
     if args.effector_type == "T4SE":
         pretrained_types = ["esm1", "esm2_t33", "ProtBert", "ProtT5"]
     else:
         pretrained_types = ["esm1", "esm2_t33", "ProtT5"]
 
-    # Step1: 生成特征
+    # Step1:
     for model in pretrained_types:
         cmd = [
             py_exec,
@@ -41,7 +36,7 @@ def main():
         print("Running:", " ".join(cmd))
         subprocess.run(cmd, check=True, env=env)
 
-    # Step2: 预测结果
+    # Step2: 
     cmd = [
         py_exec,
         "ensemble_step12_4predict.py",
@@ -51,7 +46,7 @@ def main():
     print("Running:", " ".join(cmd))
     subprocess.run(cmd, check=True, env=env)
 
-    # 记录结束时间
+    # 
     end_time = time.time()
     elapsed = end_time - start_time
     print(f"\n Total runtime: {elapsed:.2f} seconds (~{elapsed/60:.2f} minutes)\n")
