@@ -19,7 +19,7 @@ We developed **PLM-Effector**, a hybrid framework that combines pre-trained prot
 - Integrates features through a **two-layer ensemble stacking strategy**  
 
 By leveraging discriminative sequence representations and optimized neural models, PLM-Effector outperforms existing predictors across these secretion types, providing a generalizable, high-performing framework for bacterial secreted protein prediction.
-![Workflow diagram](figures/workflow.tif)
+![Workflow diagram](workflow.tif)
 
 
 ---
