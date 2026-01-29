@@ -19,6 +19,8 @@ We developed **PLM-Effector**, a hybrid framework that combines pre-trained prot
 - Integrates features through a **two-layer ensemble stacking strategy**  
 
 By leveraging discriminative sequence representations and optimized neural models, PLM-Effector outperforms existing predictors across these secretion types, providing a generalizable, high-performing framework for bacterial secreted protein prediction.
+![Workflow diagram](figures/workflow.tif)
+
 
 ---
 
@@ -48,36 +50,26 @@ For **online predictions**, visit our web server:
 ## Local GPU Usage 💻
 
 PLM-Effector can be run on local GPU servers for **whole-genome scale analyses**.
-
-<details>
-<summary>Click to expand: Setup & Prediction Commands</summary>
+Click to expand: Setup & Prediction Commands
 
 **Step 1: Create Conda Environment**
 ```bash
 conda env create -f py39_cuda11.3.yml
+
 **Step 2: Activate Environment**
 conda activate py39_cuda11.3
 
 **Step 3: Run Predictions**
 python run_pipeline.py --usefile_id <example_id> --effector_type <T1SE/T2SE/...>
-</details>
-**Quick Demo **
-To quickly test PLM-Effector without downloading the full training dataset, we provide example FASTA files for each effector type in the tmp folder.
 
-<details> <summary>Click to expand: Run demo predictions</summary>
-
-# Activate environment
+**Quick Demo**
+To quickly test PLM-Effector without downloading the full training dataset, we provide example FASTA files for each effector type in the **tmp** folder.
 conda activate py39_cuda11.3
-
-# Predict for each secretion system example
 python run_pipeline.py --usefile_id T1SE_example --effector_type T1SE
 python run_pipeline.py --usefile_id T2SE_example --effector_type T2SE
 python run_pipeline.py --usefile_id T3SE_example --effector_type T3SE
 python run_pipeline.py --usefile_id T4SE_example --effector_type T4SE
 python run_pipeline.py --usefile_id T6SE_example --effector_type T6SE
-Important: The pretrained models are large. Before running the demo, please download the models from:
-Pretrained Models
-and place them in the trained_models folder within the PLM-Effector repository.
-
-</details>
+**Note**: The pretrained models are large. Before running the demo, please download the models from [http://www.mgc.ac.cn/PLM-Effector/downloads.html](URL):
+from Sourcecode fold and place them in the trained_models folder within the PLM-Effector repository.
 
