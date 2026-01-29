@@ -36,7 +36,7 @@ You can download our [datasets.zip](#) containing training and test sets for eac
 | T4SE | T4SE_train.fasta | T4SE_test.fasta |
 | T6SE | T6SE_train.fasta | T6SE_test.fasta |
 
-> **Note:** This is optional if you want to train your own models. For **demo/testing**, the example FASTA files in **tmp** fold are sufficient.
+> **Note:** This is optional if you want to train your own models. 
 
 ---
 
@@ -70,6 +70,7 @@ python run_pipeline.py --usefile_id T3SE_example --effector_type T3SE
 python run_pipeline.py --usefile_id T4SE_example --effector_type T4SE
 python run_pipeline.py --usefile_id T6SE_example --effector_type T6SE
 
-# Note: The pretrained models are large. Before running the demo,
+# Note: For **demo**, the example FASTA files are in **tmp** fold.
+# The pretrained models are large. Before running the demo,
 # download them from http://www.mgc.ac.cn/PLM-Effector/downloads.html
 # and place them in the trained_models folder within the PLM-Effector repository.
