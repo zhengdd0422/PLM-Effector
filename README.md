@@ -43,33 +43,33 @@ You can download our [datasets.zip](#) containing training and test sets for eac
 ## Web Server 🌐
 
 For **online predictions**, visit our web server:  
-[PLM-Effector Web Server](http://www.mgc.ac.cn/zhengdd/PLM-Effector/)
+[PLM-Effector](http://www.mgc.ac.cn/zhengdd/PLM-Effector/) Web Server
 
 ---
 
 ## Local GPU Usage 💻
 
 PLM-Effector can be run on local GPU servers for **whole-genome scale analyses**.
-Click to expand: Setup & Prediction Commands
 
-**Step 1: Create Conda Environment**
+### Setup & Prediction Commands
+
 ```bash
+# Step 1: Create Conda Environment
 conda env create -f py39_cuda11.3.yml
 
-**Step 2: Activate Environment**
+# Step 2: Activate Environment
 conda activate py39_cuda11.3
 
-**Step 3: Run Predictions**
+# Step 3: Run Predictions
 python run_pipeline.py --usefile_id <example_id> --effector_type <T1SE/T2SE/...>
 
-**Quick Demo**
-To quickly test PLM-Effector without downloading the full training dataset, we provide example FASTA files for each effector type in the **tmp** folder.
-conda activate py39_cuda11.3
+# Quick Demo: example FASTA files
 python run_pipeline.py --usefile_id T1SE_example --effector_type T1SE
 python run_pipeline.py --usefile_id T2SE_example --effector_type T2SE
 python run_pipeline.py --usefile_id T3SE_example --effector_type T3SE
 python run_pipeline.py --usefile_id T4SE_example --effector_type T4SE
 python run_pipeline.py --usefile_id T6SE_example --effector_type T6SE
-**Note**: The pretrained models are large. Before running the demo, please download the models from [http://www.mgc.ac.cn/PLM-Effector/downloads.html](URL):
-from Sourcecode fold and place them in the trained_models folder within the PLM-Effector repository.
 
+# Note: The pretrained models are large. Before running the demo,
+# download them from http://www.mgc.ac.cn/PLM-Effector/downloads.html
+# and place them in the trained_models folder within the PLM-Effector repository.
